@@ -1,0 +1,28 @@
+{
+  "name": "onyourside-man",
+  "version": "0.1.0",
+  "description": "You are a Nationwide claims adjuster! Hit your performance targets and avoid obstacles.",
+  "main": "docs/index.html",
+  "dependencies": {
+    "quintus": "git+https://github.com/benwiley4000/Quintus.git#audioLoopPoints"
+  },
+  "scripts": {
+    "start": "webpack-dev-server",
+    "build": "webpack --config webpack.config.js"
+  },
+  "author": "Nate",
+  "license": "To Kill",
+  "devDependencies": {
+    "clean-webpack-plugin": "~0.1.19",
+    "copy-webpack-plugin": "^5.0.3",
+    "file-loader": "^4.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "run-sequence": "^1.1.5",
+    "spriter": "git+https://github.com/cykod/Spriter.git",
+    "vinyl-source-stream": "^1.1.0",
+    "webpack": "^4.35.3",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.7.2",
+    "write-file-webpack-plugin": "^4.5.0"
+  }
+}
