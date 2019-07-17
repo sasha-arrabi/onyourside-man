@@ -21,7 +21,7 @@ module.exports = function(env) {
 
   // Input files
   setup.entry = {
-    'app': root('src', 'js', 'main.js')
+    'app': root('src', 'main.js')
   };
 
   // Output files
@@ -51,7 +51,6 @@ module.exports = function(env) {
   setup.plugins = [
     new CleanWebpackPlugin(['docs']),
     new HtmlWebpackPlugin({ template: root('src', 'index.html') }),
-    new CopyWebpackPlugin([{ from: root('src', 'audio'), to: root('docs', 'audio'), toType: 'dir', cache: true }]),
     new CopyWebpackPlugin([{ from: root('src', 'data'), to: root('docs', 'data'), toType: 'dir', cache: true }]),
     new CopyWebpackPlugin([{ from: root('src', 'images'), to: root('docs', 'images'), toType: 'dir', cache: true }])
   ];
