@@ -28,7 +28,7 @@ module.exports = function(env) {
   setup.output = {
     filename: '[name].[hash].js',
     path: root('docs'),
-    publicPath: '/'
+    publicPath: '/onyourside-man/'
   };
 
   // Load appropriate sourcemapping for environment
