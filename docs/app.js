@@ -27898,9 +27898,9 @@ function (_BaseClient) {
 
 /***/ }),
 
-/***/ "./node_modules/webpack-dev-server/client/index.js?http://nw191779:4200":
+/***/ "./node_modules/webpack-dev-server/client/index.js?http://nw160160:4200":
 /*!********************************************************!*\
-  !*** (webpack)-dev-server/client?http://nw191779:4200 ***!
+  !*** (webpack)-dev-server/client?http://nw160160:4200 ***!
   \********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -28082,7 +28082,7 @@ var onSocketMessage = {
   }
 };
 socket(socketUrl, onSocketMessage);
-/* WEBPACK VAR INJECTION */}.call(this, "?http://nw191779:4200"))
+/* WEBPACK VAR INJECTION */}.call(this, "?http://nw160160:4200"))
 
 /***/ }),
 
@@ -29034,13 +29034,13 @@ const Wheel =
 
 /***/ 0:
 /*!****************************************************************************!*\
-  !*** multi (webpack)-dev-server/client?http://nw191779:4200 ./src/main.js ***!
+  !*** multi (webpack)-dev-server/client?http://nw160160:4200 ./src/main.js ***!
   \****************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Projects\onyourside-man\node_modules\webpack-dev-server\client\index.js?http://nw191779:4200 */"./node_modules/webpack-dev-server/client/index.js?http://nw191779:4200");
-module.exports = __webpack_require__(/*! C:\Projects\onyourside-man\src\main.js */"./src/main.js");
+__webpack_require__(/*! C:\Users\heynemj1\Documents\Work\onyourside-man\node_modules\webpack-dev-server\client\index.js?http://nw160160:4200 */"./node_modules/webpack-dev-server/client/index.js?http://nw160160:4200");
+module.exports = __webpack_require__(/*! C:\Users\heynemj1\Documents\Work\onyourside-man\src\main.js */"./src/main.js");
 
 
 /***/ })
