@@ -21,8 +21,8 @@ export const Level1 = function (stage) {
   }));
   
 
-  stage.insert(new Q.BoxThrower());
-
   stage.insert(new Q.Player());
+  stage.insert(new Q.Wheel({x:15}));
+  stage.insert(new Q.Wheel({x:585}));
   stage.add("viewport");
 };
