@@ -1,8 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const WriteFilePlugin = require('write-file-webpack-plugin');
 
 const _root = path.resolve(__dirname, '.');
 function root(args) {
@@ -49,13 +47,10 @@ module.exports = function(env) {
 
   // Plugin setup
   setup.plugins = [
-    new CleanWebpackPlugin(['docs']),
     new HtmlWebpackPlugin({ template: root('src', 'index.html') }),
     new CopyWebpackPlugin([{ from: root('src', 'data'), to: root('docs', 'data'), toType: 'dir', cache: true }]),
     new CopyWebpackPlugin([{ from: root('src', 'images'), to: root('docs', 'images'), toType: 'dir', cache: true }])
   ];
-
-  setup.plugins.push(new WriteFilePlugin());
 
   // Load all application files
   setup.module = {};
