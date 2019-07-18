@@ -20,6 +20,8 @@ export const Level1 = function (stage) {
     y: 150
   }));
 
+  stage.insert(new Q.Vehicle());
+
   stage.insert(new Q.BoxThrower());
 
   stage.insert(new Q.Player());
