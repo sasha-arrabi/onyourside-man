@@ -9,7 +9,7 @@ window.addEventListener("load", function () {
   var Q = window.Q = Quintus()
     .include("Sprites, Scenes, Input, 2D, Anim, Touch, UI")
     .setup({ maximize: true })
-    .controls().touch()
+    .controls().touch();
 
   Q.gravityY = 2000;
 
