@@ -20,21 +20,6 @@ export const Level1 = function (stage) {
     y: 150
   }));
   
-  stage.insert(new Q.Repeater({
-    asset: "vehicle.png",
-    repeatY: false,
-    speedX: 0,
-    y: 150
-  }));
-
-  stage.insert(new Q.Repeater({
-    asset: "vwheel-source.png",
-    repeatY: false,
-    speedX: 0,
-    y: 150
-  }));
-
-
 
   stage.insert(new Q.BoxThrower());
 
