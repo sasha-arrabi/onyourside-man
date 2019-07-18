@@ -19,12 +19,12 @@ window.addEventListener("load", function() {
         sheet: "player",
         sprite: "player",
         collisionMask: SPRITE_BOX, 
-        x: 40,
-        y: 555,
+        x: 30,
+        y: 750,
         standingPoints: [ [ -16, 44], [ -23, 35 ], [-23,-48], [23,-48], [23, 35 ], [ 16, 44 ]],
         duckingPoints : [ [ -16, 44], [ -23, 35 ], [-23,-10], [23,-10], [23, 35 ], [ 16, 44 ]],
         speed: 500,
-        jump: -700
+        jump: -750
       });
   
       this.p.points = this.p.standingPoints;
@@ -35,8 +35,8 @@ window.addEventListener("load", function() {
     step: function(dt) {
       this.p.vx += (this.p.speed - this.p.vx)/4;
   
-      if(this.p.y > 555) {
-        this.p.y = 555;
+      if(this.p.y > 750) {
+        this.p.y = 750;
         this.p.landed = 1;
         this.p.vy = 0;
       } else {
@@ -136,13 +136,20 @@ window.addEventListener("load", function() {
   
   Q.scene("level1",function(stage) {
   
-    stage.insert(new Q.Repeater({ asset: "background-wall.png",
-                                  speedX: 0.5 }));
+    stage.insert(new Q.Repeater({ asset: "sky.png",
+                                  repeatY: false,
+                                  speedX: 0.5,
+                                  y: 0}));
   
-    stage.insert(new Q.Repeater({ asset: "background-floor.png",
+    stage.insert(new Q.Repeater({ asset: "road.png",
                                   repeatY: false,
                                   speedX: 1.0,
                                   y: 300 }));
+
+    stage.insert(new Q.Repeater({ asset: "grass.png",
+                                  repeatY: false,
+                                  speedX: 1.0,
+                                  y: 150 }));
   
     stage.insert(new Q.BoxThrower());
   
@@ -151,7 +158,7 @@ window.addEventListener("load", function() {
   
   });
     
-  Q.load("player.json, player.png, background-wall.png, background-floor.png, crates.png, crates.json", function() {
+  Q.load("player.json, player.png, sky.png, road.png, crates.png, crates.json, grass.png", function() {
       Q.compileSheets("player.png","player.json");
       Q.compileSheets("crates.png","crates.json");
       Q.animations("player", {
