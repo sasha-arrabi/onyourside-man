@@ -26,7 +26,7 @@ module.exports = function(env) {
 
   // Output files
   setup.output = {
-    filename: '[name].[hash].js',
+    filename: '[name].js',
     path: root('docs'),
     publicPath: '/onyourside-man/'
   };
