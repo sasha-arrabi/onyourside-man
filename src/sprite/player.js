@@ -26,7 +26,10 @@ export const Player =
     } else {
       this.p.landed = 0;
     }
-
+    
+    if (Q.inputs['up'] && this.p.landed > 0) {
+      this.p.vy = this.p.jump;
+    }
 
     this.stage.viewport.centerOn(this.p.x + 300, 400);
   }
