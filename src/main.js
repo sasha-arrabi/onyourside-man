@@ -18,6 +18,8 @@ window.loadGame = () => {
   Q.gravityY = 2000;
 
   Q.boxes = 0;
+  Q.score = 0;
+  Q.houses = [];
 
   Q.include("Audio").enableSound();
 
