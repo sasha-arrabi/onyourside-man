@@ -20,7 +20,7 @@ export const Level1 = function (stage) {
     y: 150
   }));
   
-  stage.insert(new Q.Driver({z:1}));
+  stage.insert(new Q.Driver({z:1,scale:.5}));
   stage.insert(new Q.Player({z:100}));
   stage.insert(new Q.Wheel({x:20}));
   stage.insert(new Q.Wheel({x:590}));
