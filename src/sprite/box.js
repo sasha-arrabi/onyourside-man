@@ -3,7 +3,7 @@ export const Box = {
     this._super({
       asset:'money.png',
       x: player.x + 50,
-      y: player.y,
+      y: player.y - 20,
       scale: .05,
       speed: 500,
       player: player
@@ -12,7 +12,7 @@ export const Box = {
 
   step: function (dt) {
     this.p.y -= 5;
-    this.p.x = this.p.player.x;
+    this.p.x = this.p.player.x + 50;
     this.p.angle += 10;
     this.p.scale *= .985;
 
