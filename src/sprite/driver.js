@@ -1,17 +1,15 @@
-export const Player =
+export const Driver =
 {
   init: function (p) {
 
     this._super(p, {
-      asset: "vehicle.png",
+      asset: "driver.png",
       collisionMask: 0,
-      x: 300,
-      y: 550,
+      x: 350,
+      y: 500,
       speed: 500,
       jump: -750
     });
-
-    this.p.points = this.p.standingPoints;
 
     this.add("2d, animation");
   },
@@ -19,18 +17,13 @@ export const Player =
   step: function (dt) {
     this.p.vx += (this.p.speed - this.p.vx) / 4;
 
-    if (this.p.y > 550) {
-      this.p.y = 550;
+    if (this.p.y > 500) {
+      this.p.y = 500;
       this.p.landed = 1;
       this.p.vy = 0;
     } else {
       this.p.landed = 0;
     }
 
-    if (Q.inputs['up'] && this.p.landed > 0) {
-      this.p.vy = this.p.jump;
-    }
-
-    this.stage.viewport.centerOn(this.p.x + 300, 400);
   }
 };
