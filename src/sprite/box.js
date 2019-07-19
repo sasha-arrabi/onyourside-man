@@ -37,7 +37,7 @@ export const Box = {
   },
 
   fix: function () {
-    this.p.asset = 'house1.png';
+    this.p.asset = this.p.asset(this.p.asset.length - 14) + '.png';
     delete Q.houses[this.p.id];
     Q.score++;
   }
