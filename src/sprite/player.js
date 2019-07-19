@@ -27,7 +27,7 @@ export const Player =
       this.p.landed = 0;
     }
 
-    if (Q.inputs['up'] && this.p.landed > 0) {
+    if (Q.inputs['action'] && this.p.landed > 0) {
       this.p.vy = this.p.jump;
     }
 

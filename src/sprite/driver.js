@@ -25,5 +25,8 @@ export const Driver =
       this.p.landed = 0;
     }
 
+    if (Q.inputs['action'] && this.p.landed > 0) {
+      this.p.vy = this.p.jump;
+    }
   }
 };
