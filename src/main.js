@@ -62,6 +62,6 @@ window.loadGame = () => {
       }
       playThemeSong();
     });
-});
+  };
 
 
