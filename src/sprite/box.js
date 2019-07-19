@@ -36,7 +36,12 @@ export const Box = {
   },
 
   fix: function () {
-    this.p.asset = 'house1.png';
+    if (this.p.asset == 'house1-destroyed.png'){
+      this.p.asset = 'house1.png';
+    }
+    if (this.p.asset == 'house2-destroyed.png'){
+      this.p.asset = 'house2.png';
+    }
     delete Q.houses[this.p.id];
     Q.score++;
   }
