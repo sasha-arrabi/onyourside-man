@@ -15,6 +15,8 @@ window.addEventListener("load", function () {
 
   Q.gravityY = 2000;
 
+  Q.boxes = 0;
+
   Q.include("Audio").enableSound();
 
   Q.Sprite.extend("Driver", Driver);
