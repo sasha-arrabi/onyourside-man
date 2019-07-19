@@ -6,6 +6,7 @@ import { Money } from './sprite/money';
 import { Player } from './sprite/player';
 import { Wheel } from './sprite/wheel';
 import { House } from './sprite/house';
+import { Box } from './sprite/box';
 
 window.loadGame = () => {
   var playButton = window.document.getElementById('playButton');
@@ -25,6 +26,8 @@ window.loadGame = () => {
   Q.Sprite.extend("Driver", Driver);
 
   Q.Sprite.extend("Player", Player);
+  
+  Q.Sprite.extend("Box", Box);
 
   Q.Sprite.extend("Money", Money);
 
