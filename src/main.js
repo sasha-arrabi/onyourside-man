@@ -24,8 +24,6 @@ window.addEventListener("load", function () {
 
   Q.Sprite.extend("Wheel", Wheel);
 
-
-
   Q.GameObject.extend("BoxThrower", BoxThrower);
 
   Q.scene("level1", Level1);
