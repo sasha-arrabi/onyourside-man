@@ -8,12 +8,14 @@ import { Wheel } from './sprite/wheel';
 
 window.addEventListener("load", function () {
 
-  var Q = window.Q = Quintus()
+ var Q = window.Q = Quintus({audioSupported: ['mp3', 'ogg']})
     .include("Sprites, Scenes, Input, 2D, Anim, Touch, UI")
     .setup({ maximize: true })
     .controls().touch();
 
   Q.gravityY = 2000;
+
+  Q.include("Audio").enableSound();
 
   Q.Sprite.extend("Driver", Driver);
 
@@ -27,9 +29,20 @@ window.addEventListener("load", function () {
 
   Q.scene("level1", Level1);
 
-  Q.load("driver.png, player.png, wheel-source.png, sky.png, road.png, crates.png, crates.json, grass.png, vehicle.png, money.png", function () {
+  Q.load("driver.png, player.png, wheel-source.png, sky.png, road.png, crates.png, crates.json, grass.png, vehicle.png, money.png, jingle.mp3", function () {
     Q.compileSheets("crates.png", "crates.json");
     Q.stageScene("level1");
 
+    function playThemeSong () {
+      Q.audio.stop('jingle.mp3');
+      Q.audio.play('jingle.mp3', {
+        loop: true,
+        loopStart: 0,
+        loopEnd: 51
+      });
+    }
+    playThemeSong();
   });
 });
+
+
