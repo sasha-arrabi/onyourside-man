@@ -12,10 +12,12 @@ window.loadGame = () => {
 
   var Q = window.Q = Quintus({ audioSupported: ['mp3', 'ogg'] })
     .include("Sprites, Scenes, Input, 2D, Anim, Touch, UI")
-    .setup({ maximize: true })
+    .setup({ width: 1920, height: 1080, scaleToFit: true })
     .controls().touch();
 
   Q.gravityY = 2000;
+
+  Q.boxes = 0;
 
   Q.include("Audio").enableSound();
 

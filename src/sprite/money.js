@@ -17,6 +17,9 @@ export const Money = {
     this.p.scale *= .985;
 
     if (this.p.y < 350) { this.p.scale *= .9}
-    if (this.p.y < 300) { this.destroy(); }
+    if (this.p.y < 300) { 
+      this.destroy(); 
+      Q.boxes--;
+    }
   }
 };
