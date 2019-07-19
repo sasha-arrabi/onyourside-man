@@ -6,8 +6,11 @@ export const Money = {
       y: player.y - 20,
       scale: .05,
       speed: 500,
-      player: player
+      player: player,
+      collisionMask: 1
     });
+
+    this.on('hit');
   },
 
   step: function (dt) {
@@ -17,13 +20,13 @@ export const Money = {
     this.p.scale *= .985;
 
     if (this.p.y < 350) {
-      this.p.scale *= .9
+      this.p.scale *= .9;
 
-      for (let i = 0; i < Q.houses.length; i++) {
-        if (this.p.x >= Q.houses[i].x && this.p.x < Q.houses[i].x + 100) {
-          Q.houses[i].fix();
-          Q.score++;
-          console.log(Q.score);
+      for (const key in Q.houses) {
+        if (Q.houses.hasOwnProperty(key)) {
+          if (this.p.x >= Q.houses[key].p.x - 150 && this.p.x <= Q.houses[key].p.x + 150) {
+            Q.houses[key].fix();
+          }
         }
       }
     }
@@ -32,5 +35,10 @@ export const Money = {
       this.destroy(); 
       Q.boxes--;
     }
+  },
+
+  hit: function() {
+    console.log('Hello');
+    this.p.scale = 5;
   }
 };

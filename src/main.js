@@ -1,12 +1,12 @@
 import * as Quintus from 'quintus';
 import { BoxThrower } from './game-object/box-thrower';
 import { Level1 } from './scene/level1';
+import { Box } from './sprite/box';
 import { Driver } from './sprite/driver';
+import { House } from './sprite/house';
 import { Money } from './sprite/money';
 import { Player } from './sprite/player';
 import { Wheel } from './sprite/wheel';
-import { House } from './sprite/house';
-import { Box } from './sprite/box';
 
 window.loadGame = () => {
   var playButton = window.document.getElementById('playButton');
@@ -21,7 +21,7 @@ window.loadGame = () => {
 
   Q.boxes = 0;
   Q.score = 0;
-  Q.houses = [];
+  Q.houses = {};
 
   Q.include("Audio").enableSound();
 
@@ -52,7 +52,9 @@ window.loadGame = () => {
     'vehicle.png',
     'money.png',
     'house1.png',
+    'house1-destroyed.png',
     'house2.png',
+    'house2-destroyed.png',
     'jingle.mp3'], function () {
       Q.compileSheets("crates.png", "crates.json");
       Q.stageScene("level1");

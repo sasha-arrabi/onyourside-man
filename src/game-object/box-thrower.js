@@ -11,7 +11,10 @@ export const BoxThrower = {
     this.p.launch -= dt;
 
     if (this.p.launch < 0) {
-      this.stage.insert(new Q.Box({z:-5}));
+      let key = Math.random().toString(36).substring(2, 15);
+      let house = new Q.Box(key);
+      Q.houses[key] = house;
+      this.stage.insert(house);
       this.p.launch = this.p.launchDelay + this.p.launchRandom * Math.random();
     }
   }
