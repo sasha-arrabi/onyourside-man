@@ -1,14 +1,16 @@
 import * as Quintus from 'quintus';
 import { BoxThrower } from './game-object/box-thrower';
 import { Level1 } from './scene/level1';
-import { Box } from './sprite/box';
 import { Driver } from './sprite/driver';
+import { Money } from './sprite/money';
 import { Player } from './sprite/player';
 import { Wheel } from './sprite/wheel';
 
-window.addEventListener("load", function () {
+window.loadGame = () => {
+  var playButton = window.document.getElementById('playButton');
+  playButton.parentNode.removeChild(playButton);
 
- var Q = window.Q = Quintus({audioSupported: ['mp3', 'ogg']})
+  var Q = window.Q = Quintus({ audioSupported: ['mp3', 'ogg'] })
     .include("Sprites, Scenes, Input, 2D, Anim, Touch, UI")
     .setup({ maximize: true })
     .controls().touch();
@@ -21,7 +23,7 @@ window.addEventListener("load", function () {
 
   Q.Sprite.extend("Player", Player);
 
-  Q.Sprite.extend("Box", Box);
+  Q.Sprite.extend("Money", Money);
 
   Q.Sprite.extend("Wheel", Wheel);
 
@@ -33,7 +35,7 @@ window.addEventListener("load", function () {
     Q.compileSheets("crates.png", "crates.json");
     Q.stageScene("level1");
 
-    function playThemeSong () {
+    function playThemeSong() {
       Q.audio.stop('jingle.mp3');
       Q.audio.play('jingle.mp3', {
         loop: true,
@@ -43,6 +45,4 @@ window.addEventListener("load", function () {
     }
     playThemeSong();
   });
-});
-
-
+}

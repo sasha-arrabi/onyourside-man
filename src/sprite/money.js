@@ -1,4 +1,4 @@
-export const Box = {
+export const Money = {
   init: function (player) {
     this._super({
       asset:'money.png',

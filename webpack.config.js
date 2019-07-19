@@ -52,6 +52,7 @@ module.exports = function(env) {
     new CleanWebpackPlugin(['docs']),
     new WriteFilePlugin(),
     new HtmlWebpackPlugin({ template: root('src', 'index.html') }),
+    new CopyWebpackPlugin([{ from: root('src', 'assets'), to: root('docs', 'assets'), toType: 'dir', cache: true }]),
     new CopyWebpackPlugin([{ from: root('src', 'data'), to: root('docs', 'data'), toType: 'dir', cache: true }]),
     new CopyWebpackPlugin([{ from: root('src', 'images'), to: root('docs', 'images'), toType: 'dir', cache: true }]),
     new CopyWebpackPlugin([{ from: root('src', 'audio'), to: root('docs', 'audio'), toType: 'dir', cache: true }])

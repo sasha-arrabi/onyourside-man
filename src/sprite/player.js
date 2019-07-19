@@ -32,7 +32,7 @@ export const Player =
     }
 
     if (Q.inputs['fire']) {
-      this.stage.insert(new Q.Box(this.p));
+      this.stage.insert(new Q.Money(this.p));
     }
 
     this.stage.viewport.centerOn(this.p.x + 300, 400);
