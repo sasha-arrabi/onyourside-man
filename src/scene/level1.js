@@ -3,7 +3,7 @@ export const Level1 = function (stage) {
     asset: "sky.png",
     repeatY: false,
     speedX: 0.5,
-    y: 0
+    y: -75
   }));
   1
   stage.insert(new Q.Repeater({
