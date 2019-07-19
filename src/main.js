@@ -4,6 +4,7 @@ import { Level1 } from './scene/level1';
 import { Box } from './sprite/box';
 import { Player } from './sprite/player';
 import { Wheel } from './sprite/wheel';
+import { Driver } from './sprite/driver';
 import { Vehicle } from './sprite/vehicle';
 
 window.addEventListener("load", function () {
@@ -15,18 +16,21 @@ window.addEventListener("load", function () {
 
   Q.gravityY = 2000;
 
+  Q.Sprite.extend("Driver", Driver);
+
   Q.Sprite.extend("Player", Player);
 
   Q.Sprite.extend("Box", Box);
 
-  Q.Sprite.extend("Wheel", Wheel)
-  
+  Q.Sprite.extend("Wheel", Wheel);
+
+
 
   Q.GameObject.extend("BoxThrower", BoxThrower);
 
   Q.scene("level1", Level1);
 
-  Q.load("player.png, wheel-source.png, sky.png, road.png, crates.png, crates.json, grass.png, vehicle.png", function () {
+  Q.load("driver.png, player.png, wheel-source.png, sky.png, road.png, crates.png, crates.json, grass.png, vehicle.png", function () {
     Q.compileSheets("crates.png", "crates.json");
     Q.stageScene("level1");
 
