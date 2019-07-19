@@ -4,9 +4,29 @@
     <meta charset="utf-8"/>
     <title>OnYourSide-Man</title>
     <style> 
-      body { padding:0px; margin:0px; } 
+      body { padding:0px; margin:0px; }
+
+      .parent {
+        position: relative;
+      }
+
+      .child {
+        position: absolute;
+        width: 269px;
+        height: 269px;
+        margin-top: 300px;
+        margin-left: -134px;
+        left: 50%;
+      }
+
+      .child:hover {
+        cursor: pointer;
+      }
     </style>
   </head>
   <body>
+    <div id="playButton" class="parent">
+      <img class="child" src="assets/play.jpg" onclick="loadGame()">
+    </div>
   </body>
 </html>

@@ -1,17 +1,19 @@
 import * as Quintus from 'quintus';
 import { BoxThrower } from './game-object/box-thrower';
 import { Level1 } from './scene/level1';
-import { Box } from './sprite/box';
 import { Driver } from './sprite/driver';
+import { Money } from './sprite/money';
 import { Player } from './sprite/player';
 import { Wheel } from './sprite/wheel';
 import { House } from './sprite/house';
 
-window.addEventListener("load", function () {
+window.loadGame = () => {
+  var playButton = window.document.getElementById('playButton');
+  playButton.parentNode.removeChild(playButton);
 
   var Q = window.Q = Quintus({ audioSupported: ['mp3', 'ogg'] })
     .include("Sprites, Scenes, Input, 2D, Anim, Touch, UI")
-    .setup({ maximize: true })
+    .setup({ width: 1920, height: 1080, scaleToFit: true })
     .controls().touch();
 
   Q.gravityY = 2000;
@@ -24,7 +26,7 @@ window.addEventListener("load", function () {
 
   Q.Sprite.extend("Player", Player);
 
-  Q.Sprite.extend("Box", Box);
+  Q.Sprite.extend("Money", Money);
 
   Q.Sprite.extend("Wheel", Wheel);
   
