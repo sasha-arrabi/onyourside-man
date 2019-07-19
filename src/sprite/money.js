@@ -23,6 +23,7 @@ export const Money = {
         if (this.p.x >= Q.houses[i].x && this.p.x < Q.houses[i].x + 100) {
           Q.houses[i].fix();
           Q.score++;
+          console.log(Q.score);
         }
       }
     }
