@@ -11,7 +11,7 @@ export const Box = {
       collisionMask: 1,
       frame: Math.random() < 0.5 ? 1 : 0,
       scale: .7,
-      asset:'house1-destroyed.png',
+      asset: (Math.random() < 0.5 ? 'house1-destroyed.png' :'house2-destroyed.png'),
       vx: 0,
       vy: 0,
       sx: 600,
