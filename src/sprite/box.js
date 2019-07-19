@@ -9,7 +9,6 @@ export const Box = {
       x: player.p.x + Q.width + 50,
       y: 265,
       collisionMask: 1,
-      frame: Math.random() < 0.5 ? 1 : 0,
       scale: .7,
       asset: (Math.random() < 0.5 ? 'house1-destroyed.png' :'house2-destroyed.png'),
       vx: 0,
